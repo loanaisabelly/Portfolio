@@ -1,141 +1,261 @@
-*{
+* {
     margin: 0;
     padding: 0;
+
+    /* Faz com que width e height incluam a borda e o padding,*/
     box-sizing: border-box;
+
+    /* Desabilita o sublinhado dos links*/
     text-decoration: none;
+
+    /* Desabilita a borda de foco dos elementos*/
     outline: none;
-    font-weight:  400;
+
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
+/* Declaração das variáveis */
+:root {
     --purple-200: #9a7bd1;
     --purple-500: #6b36c8;
     --purple-800: #441f88;
- 
+
     --gray-200: #cccccc;
     --gray-400: #505861;
- 
+
     --black-800: #171717;
- 
+
     --white: #F9F9F9;
+
+    --azul: #0894f1;
+
+    --azul-celeste:  #201e50;
+    
 }
 
-html{
+/* Configurações padrões da página 
+   Este seletor afeta todos os elementos debtro da tag html.
+*/
+html {
     width: 100%;
     height: 100vh;
+
+    /* Permite que a rolagem da página aconteça de forma suave*/
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: var(--gray-200);
     color: var(--black-800);
+
+    /* Exibe as fontes com um traço mais fino e suave (Chrome e Edge) */
     -webkit-font-smoothing: antialiased;
+
+    /* Exibe as fontes com um traço mais fino e suave (Firefox) */
     -moz-osx-font-smoothing: grayscale;
 }
 
-button, 
-a{
+button,
+a {
     cursor: pointer;
 }
 
-.botao{
-    text-align: center;
-    padding: 12px 32px;
-    background: none;
-    border: 1px solid var(--purple-800);
-    border-radius: 10px; 
+.botao {
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--black-800);
+    border-radius: 10px;
+    font-size: 1rem;
     font-weight: 700;
+    text-align: center;
+    color: black;
+    background: none;
 }
 
-.botao:hover{
-    background-color: var(--purple-800);
+.botao:hover {
     color: var(--white);
+    background-color: #2b3d41;
 }
 
-.flex{
+.flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menu_container{
-    height: 80px;
-    position: sticky;
+/* Estilização - Seção Header */
+
+/* Menu Container */
+
+.menu_container {
+    position: sticky; 
     top: 0;
-    width: 100%;
-    background-color: var(--purple-800);
-    border-bottom: 1px solid var(--purple-500);
-    filter: opacity(0.9);
+    width: 100%; 
+    height: 5rem; 
+    border-bottom: 1px solid var(--black-800); 
+    filter: opacity(0.9); 
+    transition: background-color 1s ease; 
 }
 
-.menu_container a{
-    color: var(--white);
-    font-weight: 700;
+/* Estilos para os links do menu */
+.menu_container a {
+    font-weight: 700; 
+    color: var(--black-800); 
 }
 
-.menu_container a:hover{
-    color: var(--purple-200);
+
+.menu_container a:hover {
+    color: var(--white); 
 }
 
-.menu_content{
-    max-width: 1120px;
-    padding: 0 24px;
-    width: 100%;
+/* Animação de troca de cor do menu */
+.menu_container {
+    animation: changeMenuColor 6s infinite linear; /* Aplica a animação 'changeMenuColor' ao menu com uma duração de 5 segundos, rodando infinitamente e de forma linear */
+}
+
+/* Definição da animação de troca de cor do menu */
+@keyframes changeMenuColor {
+    0% {
+        background: rgba(247, 2, 2, 0.6); /* Cor da face superior do cubo (vermelho) */
+    }
+    16.66% {
+        background: rgba(11, 196, 11, 0.6); /* Cor da face inferior do cubo (verde) */
+    }
+    33.33% {
+        background: rgba(3, 3, 177, 0.6); /* Cor da face direita do cubo (azul) */
+    }
+    50% {
+        background: rgba(212, 47, 74, 0.6); /* Cor da face esquerda do cubo (rosa) */
+    }
+    66.66% {
+        background: rgba(16, 177, 218, 0.6); /* Cor da face traseira do cubo (ciano) */
+    }
+    83.33% {
+        background: rgba(181, 211, 9, 0.6); /* Cor da face frontal do cubo (amarelo) */
+    }
+    100% {
+        background: rgba(247, 2, 2, 0.6); /* Retorna para a cor da face superior do cubo (vermelho) */
+    }
+}
+
+
+.menu_content {
     display: flex;
     justify-content: space-between;
-}
-
-.menu_list{
-    list-style: none;
-    text-align: center;
-}
-
-.menu_list li{
-    margin-left: 1rem;
-
-}
-
-.home_container{
+    width: 100%;
     max-width: 1120px;
-    margin:  16px auto;
-    padding: 0 1rem;
-    height: calc(100vh -100px);
+    padding: 0 1.5rem;
 }
 
-.home_container p,h1,h4{
- text-align: center;
- font-size: 1rem;
+.menu_list {
+    text-align: center;
+    list-style: none;
 }
 
-.home_container h1{
+.menu_list li {
+    margin-left: 1rem;
+}
+
+#menu_content_sucess {
+    width: 100%;
+    max-width: 1120px;
+    padding: 0 1.5rem;
+}
+
+/* Estilização da Seção Home */
+
+.home_container {
+    /* Calcula altura do elemento (altura do navegador - altura do menu + 20px) */
+    height: calc(100vh - 6.25rem);  /* Ajusta a altura da seção */
+    max-width: 1120px;
+    margin: 1rem auto;  /* Centraliza a seção na tela */
+    padding: 0 2rem;  /* Ajusta o padding */
+    display: flex; /* Usando flexbox */
+    justify-content: flex-end; /* Move o conteúdo para a direita */
+    align-items: center;  /* Alinha verticalmente no centro */
+}
+
+.home_content {
+    flex-direction: column;
+    width: 50vw;  /* Ajusta a largura para garantir que o texto ocupe menos espaço */
+    text-align: left;  /* Alinha o texto à esquerda */
+    padding-right: 2rem; /* Dá mais espaço à direita para evitar sobreposição */
+}
+
+.home_container p,
+h1,
+h4 {
+    font-size: 1rem;
+    text-align: left;  /* Alinha os textos à esquerda */
+}
+
+.home_container h1 {
     font-size: 2.25rem;
+    font-weight: 700;
     line-height: 3rem;
-    font-weight: 700;
-
+    font-family: "Dancing Script", serif;
 }
 
-.home_container h4{
+.home_container h4 {
     font-weight: 700;
 }
 
-.home_container p{
+.home_container p {
     margin: 1rem 0;
 }
 
-.home_container .botao{
+.home_container .botao {
     width: 40%;
+    margin-top: 2rem; 
 }
 
-.home_content{
+.habilidades {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 1.5rem; /* Distância entre o título "Habilidades" e a lista */
+}
+
+.habilidades li {
+    font-size: 1.125rem;
+    color: #555;
+    background-color: #f2f2f2;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Estilização da Seção Home - Página Sucess */
+
+.home_container_sucess {
+    height: calc(100vh - 12.5rem);
+    max-width: 1120px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+#home_sucess {
     width: 50vw;
     flex-direction: column;
 }
 
-.home_content img{
-    width: 75%;
-    display: flex;
+#home_sucess h1 {
+    font-size: 2rem;
+    font-weight: 700;
 }
+
+#home_sucess h4 {
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+/* Estilização da Seção Sobre */
 
 .sobre_container {
     max-width: 1120px;
@@ -147,8 +267,10 @@ a{
 .sobre_container img {
     width: 30%;
     margin: 1rem;
-    border: 5px solid var(--purple-500);
-    border-radius: 50%;
+    border: 5px solid var(--black-800);
+    border-radius: 20%;
+ 
+    
 }
 
 .sobre_container h2 {
@@ -270,7 +392,7 @@ footer {
     font-weight: bold;
     text-align: center;
     color: var(--white);
-    background-color: var(--purple-500);
+    background-color: var(#2b3d41);
     filter: opacity(0.9);
 }
 

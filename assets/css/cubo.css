@@ -1,0 +1,74 @@
+body {
+    background: var(--gray-200);
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner do Cubo */
+.container_cub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+
+}
+
+/* Cubo em si */
+.cubo {
+    width: 150px; 
+    height: 150px; 
+    position: relative;
+    top: -10%;
+    transform-style: preserve-3d;
+    animation: spin 6s infinite linear;
+}
+
+/* Cada face do cubo */
+.face {
+    position: absolute;
+    width: 150px; /* Tamanho reduzido */
+    height: 150px; /* Tamanho reduzido */
+    opacity: 10; /* Deixe a opacidade um pouco transparente */
+}
+
+/* Faces do cubo */
+.top {
+    background-color: rgba(247, 2, 2, 0.6); /* Cor com opacidade */
+    transform: rotateX(90deg) translateZ(75px); /* Ajuste para o novo tamanho */
+}
+
+.bottom {
+    background-color: rgba(11, 196, 11, 0.6);
+    transform: rotateX(-90deg) translateZ(75px); /* Ajuste para o novo tamanho */
+}
+
+.right {
+    background-color: rgba(3, 3, 177, 0.6);
+    transform: rotateY(90deg) translateZ(75px); /* Ajuste para o novo tamanho */
+}
+
+.left {
+    background-color: rgba(212, 47, 74, 0.6);
+    transform: rotateY(-90deg) translateZ(75px); /* Ajuste para o novo tamanho */
+}
+
+.back {
+    background-color: rgba(16, 177, 218, 0.6);
+    transform: rotateY(180deg) translateZ(75px); /* Ajuste para o novo tamanho */
+}
+
+.front {
+    background-color: rgba(181, 211, 9, 0.6);
+    transform: translateZ(75px); /* Ajuste para o novo tamanho */
+}
+
+/* Animação de rotação do cubo */
+@keyframes spin {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}

@@ -8,6 +8,7 @@
 
     <!-- Fonte do Google - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +16,13 @@
     <meta name="author" content="Loana Isabelly">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel="icon" href="./assets/img/favicon.svg" />
-    
+
     <link rel="stylesheet" href="./assets/css/styles.css">
-    
+    <link rel="stylesheet" href="./assets/css/cubo.css">
+
     <title>Portfólio de Loana</title>
+
+
 </head>
 
 <body>
@@ -32,7 +36,7 @@
             <div id="titulo">
 
                 <!-- Hyperlink -->
-                <a href="#">Universo</a>
+                <a href="#">Portfólio</a>
 
             </div>
 
@@ -63,12 +67,24 @@
             <!-- Texto da Seção Home -->
             <article id="home_texto" class="flex home_content">
 
-                <h4>Bem-vindo ao Novo Universo</h4>
-                <h1>Mundos diferentes para pessoas diferentes</h1>
+                <h4>Bem-vindo(a)</h4>
+                <h1>Sou Loana Isabelly</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quod error veniam in voluptatem magni quisquam
+                    minha jornada é movida pela curiosidade e pela vontade de explorar novas possibilidades.
+                    Acredito que a tecnologia tem o poder de transformar realidades e conectar pessoas de formas únicas.
                 </p>
+
+                <h2>Habilidades</h2>
+                <ul class="habilidades">
+                    <li>TypeScript</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>NestJS</li>
+                    <li>SQL</li>
+                    <li>Java</li>
+                </ul>
+
 
                 <a target="_blank" href="https://github.com/loanaisabelly" class="botao">
                     Explorar
@@ -76,10 +92,18 @@
 
             </article>
 
-            <!-- Imagem da Seção Home -->
-            <article id="home_imagem" class="home_content">
-                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado">
-            </article>
+            <article id="cubo"> 
+                <div class="container_cub">
+                  <div class="cubo">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                  </div>
+                </div>
+              </article>
 
         </section>
 
@@ -87,22 +111,28 @@
         <section id="about" class="flex sobre_container">
 
             <!-- Imagem da Seção Sobre -->
-            <img src="./assets/img/user_01.svg" alt="Foto do Perfil do Github">
+            <img src="./assets/img/eu.jpg" alt="Foto do Perfil do Github">
 
             <!-- Texto da Seção Sobre -->
             <article id="about_texto">
                 <h2>Sobre mim</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil magni doloremque sint, qui facere
-                    fugit sequi optio molestiae sunt! Maiores sapiente atque nulla mollitia earum delectus nostrum natus
-                    architecto?</p>
+                <p>Minha jornada profissional começou de maneira diversa, mas foi na transição para a área de tecnologia que encontrei minha verdadeira paixão. 
+                    Inicialmente, cursei Veterinária, movida pelo amor aos animais, mas percebi que meu propósito estava em outro caminho. 
+                    Decidi então migrar para a área de TI e estou atualmente cursando Análise e Desenvolvimento de Sistemas. 
+                    Durante o curso, tive a oportunidade de ser monitora na disciplina de Banco de Dados I, uma área pela qual me apaixonei profundamente.
+                    Minha trajetória profissional, marcada por experiências em diferentes áreas, me proporcionou habilidades valiosas como organização, gestão de tempo, 
+                    empatia, resolução de problemas, comunicação eficaz e trabalho em equipe.Essas competências me ajudam a enfrentar os desafios do mercado de tecnologia e 
+                    buscar a excelência em cada novo projeto.
+                
+                </p>
 
                 <!-- Informações do Github -->
                 <div id="sobre_github" class="flex sobre_github">
 
                     <a target="_blank" href="https://github.com/loanaisabelly" class="botao">
-                    Github</a>
-                    <p>200 Seguidores</p>
-                    <p>100 Repositórios</p>
+                        Github</a>
+                    <p>1 Seguidores</p>
+                    <p>23 Repositórios</p>
 
                 </div>
 
@@ -123,11 +153,11 @@
                     <a href="https://www.linkedin.com/in/loana-isabelly/" target="_blank">
                         <img src="./assets/img/linkedin.svg" alt="Logo do Linkedin" class="social_icon">
                     </a>
-    
+
                     <a href="https://github.com/loanaisabelly" target="_blank">
                         <img src="./assets/img/github.svg" alt="Logo do Github" class="social_icon">
                     </a>
-    
+
                     <a href="https://www.instagram.com/looaana__?igsh=NzZmZmU4OTBiZzJv" target="_blank">
                         <img src="./assets/img/instagram.svg" alt="Logo do Instagram" class="social_icon">
                     </a>
