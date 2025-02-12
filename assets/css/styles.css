@@ -32,6 +32,9 @@
 
     --azul-celeste:  #201e50;
     
+   
+
+
 }
 
 /* Configurações padrões da página 
@@ -221,7 +224,7 @@ h4 {
 
 .habilidades li {
     font-size: 1.125rem;
-    color: #555;
+    color: #000000;
     background-color: #f2f2f2;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -268,7 +271,7 @@ h4 {
     width: 30%;
     margin: 1rem;
     border: 5px solid var(--black-800);
-    border-radius: 20%;
+    border-radius: 0%;
  
     
 }
@@ -334,6 +337,7 @@ h4 {
 .social_icon{
     width: 4.75rem;
     height: 4.75rem;
+   
 }
 
 .social_icon:hover{
@@ -345,6 +349,8 @@ h4 {
             hue-rotate(242deg) 
             brightness(89%) 
             contrast(108%);
+            
+            
 }
 
 /* Estilização da Seção Form*/
@@ -391,7 +397,7 @@ footer {
     padding: 2rem;
     font-weight: bold;
     text-align: center;
-    color: var(--white);
+    color: var(--black-800);
     background-color: var(#2b3d41);
     filter: opacity(0.9);
 }
@@ -547,3 +553,5 @@ footer {
     }
 
 }
+
+

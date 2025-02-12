@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Estilo do botão de alternância de tema */
+#themeButton {
+    background: none; /* Remover fundo */
+    border: none; /* Remover borda */
+    cursor: pointer; /* Cursor de mãozinha */
+    font-size: 30px; /* Tamanho do ícone */
+    position: fixed; /* Fixo ao lado do menu */
+    top: 100px; /* Distância do topo (ajustado para afastar mais do menu) */
+    right: 20px; /* Distância da direita */
+    z-index: 9999; /* Garantir que o botão fique acima de outros elementos */
+    padding: 0; /* Remover qualquer preenchimento ao redor do ícone */
+}
+
+/* Tema claro */
+body.light-mode {
+    background-color: #d8d3d3;
+    color: black;
+}
+
+/* Tema escuro */
+body.dark-mode {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}

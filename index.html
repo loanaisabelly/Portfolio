@@ -12,6 +12,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternar Tema</title>
+
+    <!-- Link para o Font Awesome (para ícones de estrela e lua) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta name="description" content="Projeto Portfólio">
     <meta name="author" content="Loana Isabelly">
     <meta name="keywords" content="HTML, CSS, JavaScript">
@@ -19,6 +23,7 @@
 
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/cubo.css">
+
 
     <title>Portfólio de Loana</title>
 
@@ -31,12 +36,15 @@
 
         <!-- Div Conteudo do Cabeçalho -->
         <div id="header_content" class="menu_content">
-
+            
             <!-- Titulo do Cabeçalho -->
             <div id="titulo">
+                <button id="themeButton" onclick="mudarBackground()">
+                    <i id="themeIcon" class="fas fa-star"></i> <!-- Ícone da estrela -->
+                </button>
 
                 <!-- Hyperlink -->
-                <a href="#">Portfólio</a>
+                <a href="#">Portfólio Loana</a>
 
             </div>
 
@@ -52,7 +60,6 @@
                         <li><a href="#contact">Contate-me</a></li>
                     </ul>
                 </nav>
-
             </div>
         </div>
 
@@ -61,6 +68,8 @@
     <!-- Seção Principal da Página (main) -->
     <main>
 
+         <!-- Aqui estamos criando o botão que o usuário vai clicar para alternar entre o modo claro e escuro -->
+        
         <!-- Seção Home -->
         <section id="home" class="flex home_container">
 
@@ -145,9 +154,8 @@
 
             <article id="redes_sociais" class="contato_content">
                 <h4>Contate-me</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum quae voluptas error omnis,
-                    deleniti molestiae dolores earum incidunt sint minus magni sunt maiores minima, cumque quam numquam
-                    officia obcaecati perspiciatis.</p>
+                <p>Fico feliz em saber que você quer entrar em contato! Seja para esclarecer dúvidas, discutir projetos ou apenas trocar ideias, 
+                    estou à disposição para ajudar. Você pode me enviar uma mensagem pelo formulário ao lado ou, se preferir, me contatar diretamente através dos seguintes canais:</p>
 
                 <div id="icones_redes_sociais" class="social_container">
                     <a href="https://www.linkedin.com/in/loana-isabelly/" target="_blank">
@@ -166,7 +174,12 @@
             </article>
 
             <!-- Seção do Formulário-->
-            <form action="" method="POST">
+            <form action="https://formsubmit.co/1f688063ebb01cae569840b60ef97865" method="POST">
+
+
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/sucess.html">
+                <input type="hidden" name="_captcha" value="false">
 
                 <label for="nome">Nome</label>
                 <input id="nome" type="text" name="nome" placeholder="Digite o seu nome">
@@ -195,6 +208,9 @@
         Feito com 🧡 por Loana Isabelly - 2025
     </footer>
 
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/javascript.js"></script>
 </body>
+
 
 </html>
